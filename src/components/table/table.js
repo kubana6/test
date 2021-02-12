@@ -12,7 +12,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   changeDataElement,
   changeModalActive,
-} from "../../redux/reducers/dataTable";
+} from "../../redux/actions/dataTableAC";
 import { Box, Button } from "@material-ui/core";
 const useStyles = makeStyles({
   table: {
@@ -80,6 +80,7 @@ export const TableShares = () => {
                 </TableCell>
                 <TableCell align="right">
                   <TextField
+                    type="number"
                     onChange={(e) => {
                       const data = {
                         ...element,
